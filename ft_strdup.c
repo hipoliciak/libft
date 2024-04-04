@@ -6,7 +6,7 @@
 /*   By: dmodrzej <dmodrzej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/03 13:09:12 by dmodrzej          #+#    #+#             */
-/*   Updated: 2024/03/07 19:29:04 by dmodrzej         ###   ########.fr       */
+/*   Updated: 2024/04/04 18:55:21 by dmodrzej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strdup(const char *s)
 {
-	char			*str;
-	size_t			i;
+	char	*str;
+	size_t	i;
 
 	i = 0;
 	if (!s)

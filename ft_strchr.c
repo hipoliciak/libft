@@ -6,7 +6,7 @@
 /*   By: dmodrzej <dmodrzej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 17:38:31 by dmodrzej          #+#    #+#             */
-/*   Updated: 2024/03/09 14:06:09 by dmodrzej         ###   ########.fr       */
+/*   Updated: 2024/04/03 22:48:00 by dmodrzej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 char	*ft_strchr(const char *str, int c)
 {
 	unsigned int	i;
-	char			*find;
 
-	find = (char *)str;
 	i = 0;
-	while (find[i] != '\0')
+	if (!str)
+		return (0);
+	while (str[i] != '\0')
 	{
-		if ((unsigned char)find[i] == (unsigned char)c)
-			return (&find[i]);
+		if (str[i] == (char)c)
+			return ((char *)&str[i]);
 		i++;
 	}
 	if (c == '\0')
-		return (&find[i]);
+		return ((char *)&str[i]);
 	return (0);
 }
