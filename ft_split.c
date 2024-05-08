@@ -6,7 +6,7 @@
 /*   By: dmodrzej <dmodrzej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 18:02:29 by dmodrzej          #+#    #+#             */
-/*   Updated: 2024/03/10 12:58:07 by dmodrzej         ###   ########.fr       */
+/*   Updated: 2024/05/03 14:02:09 by dmodrzej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static unsigned int	count_words(const char *str, char c)
 	return (words);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(const char *s, char c)
 {
 	char			**arr;
 	size_t			len;

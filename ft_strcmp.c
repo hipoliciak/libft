@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmodrzej <dmodrzej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/04 17:41:23 by dmodrzej          #+#    #+#             */
-/*   Updated: 2024/05/03 14:02:34 by dmodrzej         ###   ########.fr       */
+/*   Created: 2024/04/20 15:56:39 by dmodrzej          #+#    #+#             */
+/*   Updated: 2024/04/20 15:56:47 by dmodrzej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strtrim(const char *s1, const char *set)
+int	ft_strcmp(char *s1, char *s2)
 {
-	char	*str;
-	int		i;
-	int		j;
+	unsigned int	i;
 
-	if (!s1)
-		return (0);
-	if (!set)
-		return (ft_strdup(s1));
 	i = 0;
-	j = (ft_strlen((char *)s1) - 1);
-	while (s1[i] && ft_strchr(set, s1[i]))
+	while (s1[i] || s2[i])
+	{
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
 		i++;
-	while (s1[i] && ft_strrchr(set, s1[j]))
-		j--;
-	str = ft_substr(s1, i, ((j - i) + 1));
-	return (str);
+	}
+	return (0);
 }

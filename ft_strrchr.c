@@ -6,7 +6,7 @@
 /*   By: dmodrzej <dmodrzej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 17:59:57 by dmodrzej          #+#    #+#             */
-/*   Updated: 2024/03/09 14:07:15 by dmodrzej         ###   ########.fr       */
+/*   Updated: 2024/05/02 22:25:34 by dmodrzej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,13 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	int		i;
-	char	*find;
+	int	i;
 
-	find = (char *)str;
-	i = ft_strlen(find);
+	i = ft_strlen(str);
 	while (i >= 0)
 	{
-		if ((unsigned char)find[i] == (unsigned char)c)
-			return (&find[i]);
+		if (str[i] == (char)c)
+			return ((char *)&str[i]);
 		i--;
 	}
 	return (0);

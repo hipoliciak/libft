@@ -6,7 +6,7 @@
 /*   By: dmodrzej <dmodrzej@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 21:04:06 by dmodrzej          #+#    #+#             */
-/*   Updated: 2024/03/02 17:18:22 by dmodrzej         ###   ########.fr       */
+/*   Updated: 2024/04/08 22:40:57 by dmodrzej         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,5 @@ int	ft_isdigit(int n)
 {
 	if (n >= '0' && n <= '9')
 		return (1);
-	else
-		return (0);
+	return (0);
 }
